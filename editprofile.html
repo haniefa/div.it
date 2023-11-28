@@ -99,7 +99,7 @@
             padding: 8px;
             border-radius: 20px;
             border: 1px solid rgba(0, 0, 0, 0.10);
-width: 100%;
+            width: 100%;
             background: #A0B68A;
             color: white;
             border: none;
@@ -114,7 +114,22 @@ width: 100%;
             width: 50%;
             align-items: center;
         }
-        
+
+        .delete {
+            font-size: 16px;
+            font-family: Poppins, sans-serif;
+            padding: 8px;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.10);
+            width: 100%;
+            background: #ab2c2c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 6px;
+            text-align: center;
+        }
+
         button:hover {
             background-color: #D6E2C9;
             color: #37733e;
@@ -135,7 +150,7 @@ width: 100%;
     </div>
     <div class="container">
         <h1>
-            User Profile
+            Edit Profile
         </h1>
         <form>
             <table>
@@ -166,9 +181,12 @@ width: 100%;
             </table>
         </form>
         <div class="button-container">
-            <form action="editprofile.html" method="get">
+            <form action="profile.html" method="get">
+                <button class="delete">
+                    Delete Bill History
+                </button>
                 <button type="submit">
-                    Edit
+                    Update
                 </button>
             </form>
         </div>
