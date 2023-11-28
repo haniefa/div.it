@@ -107,7 +107,7 @@
         .button-container {
             display: flex;
             justify-content: center;
-            margin:40px;
+            margin: 40px;
         }
 
         .button-container button {
@@ -119,6 +119,22 @@
             color: #37733e;
             box-shadow: 1px 1px #37733e, 2px 2px #37733e, 3px 3px #37733e;
             transform: translateX(-3px);
+        }
+
+        .contmemb {
+            width: 100%;
+            display: flex;
+        }
+
+        .membcont {
+            width: 20%;
+            padding: 5px;
+            margin: 10px;
+            border-radius: 20px;
+            border: none;
+            background-color: #37733e;
+            text-align: center;
+            color: white;
         }
     </style>
 </head>
@@ -160,12 +176,78 @@
             <button type="button" onclick="splitUnequally()">Split Unequally</button>
         </div>
         <div id="equallySection" style="display:none;">
-            <p> ini section equally</p>
+            <table>
+                <tr>
+                    <td>Members</td>
+                    <td>
+                        <div class="contmemb">
+                            <button class="membcont" onclick="redirectToEditMember()">
+                                Haniefa
+                            </button>
+                            <button class="membcont" onclick="redirectToEditMember()">
+                                Putri
+                            </button>
+                            <button class="membcont" onclick="redirectToEditMember()">
+                                Rizqi
+                            </button>
+                            <button onclick="redirectToAddMember()">
+                                + Add Member
+                            </button>
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            <div class="button-container">
+                <button>
+                    Calculate
+                </button>
+            </div>
+
         </div>
 
         <div id="unequallySection" style="display:none;">
-            <p>ini section unequal</p>
-        </div>
+            <form>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="tax">Tax</label>
+                        <td>
+                            <input type="number" id="tax" required />
+                        </td>
+                        </td>
+                        <td>
+                            %
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Members</td>
+                        <td>
+                            <div class="contmemb">
+                                <button class="membcont" onclick="redirectToEditMember()">
+                                    Haniefa
+                                </button>
+                                <button class="membcont" onclick="redirectToEditMember()">
+                                    Putri
+                                </button>
+                                <button class="membcont" onclick="redirectToEditMember()">
+                                    Rizqi
+                                </button>
+                                <button onclick="redirectToAddMember()">
+                                    + Add Member
+                                </button>
+                            </div>
+    
+                        </td>
+                    </tr>
+                </table>                
+            </form>
+
+            <div class="button-container">
+                <button>
+                    Calculate
+                </button>
+            </div>
     </div>
 </body>
 <script>
@@ -178,5 +260,12 @@
         document.getElementById('equallySection').style.display = 'none';
         document.getElementById('unequallySection').style.display = 'block';
     }
+    function redirectToEditMember() {
+        window.location.href = "editmember.html";
+    }
+    function redirectToAddMember() {
+        window.location.href = "addmember.html";
+    }
 </script>
+
 </html>
