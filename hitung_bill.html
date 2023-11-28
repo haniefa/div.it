@@ -156,10 +156,27 @@
         </form>
 
         <div class="button-container">
-            <button type="eq">Split Equally</button>
-            <button type="uneq">Split Unequally</button>
+            <button type="button" onclick="splitEqually()">Split Equally</button>
+            <button type="button" onclick="splitUnequally()">Split Unequally</button>
+        </div>
+        <div id="equallySection" style="display:none;">
+            <p> ini section equally</p>
+        </div>
+
+        <div id="unequallySection" style="display:none;">
+            <p>ini section unequal</p>
         </div>
     </div>
 </body>
+<script>
+    function splitEqually() {
+        document.getElementById('equallySection').style.display = 'block';
+        document.getElementById('unequallySection').style.display = 'none';
+    }
 
+    function splitUnequally() {
+        document.getElementById('equallySection').style.display = 'none';
+        document.getElementById('unequallySection').style.display = 'block';
+    }
+</script>
 </html>
